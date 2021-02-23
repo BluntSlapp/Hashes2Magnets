@@ -34,14 +34,27 @@ function update()
     }
 }
 </script>
+<script type="text/javascript">
+function hide(){
+	var x = document.getElementById("response")
+	if(x.style.display === "none) {
+	   x.style.display = "block";
+	   } else{
+	   x.style.display = "none";
+	   } 
+}
+	   
+	</script>
+	
 <div>
 	<form name="form" onsubmit="update(); return false;">
 		<label>info hashes: <textarea id="hash" rows="25" cols="50">
 		</textarea></label>
-		(mandatory; Seperate each one by return)
 		<br><br>
-		<input type="submit" value="Generate">
+		<input type="submit" value="Send to the torrent gods">
 		<br>
+		</div>
+		<div id="response">
 		Magnet Links: <textarea readonly id="link_text" rows="20" cols="30"></textarea>
 		<br>
 	</form>
