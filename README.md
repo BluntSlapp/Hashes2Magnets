@@ -1,4 +1,4 @@
-# Hashes2Magnets
+# MagnetMaker
 A simple HTML file meant to take a list of torrent hashes, and generate magnets with peers.
 
 
