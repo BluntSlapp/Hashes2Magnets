@@ -5,6 +5,10 @@
 <link rel="stylesheet" href="https://bluntslapp.github.io/magnetmaker/style.css">
 </head>
 <body>
+<h1>
+Magnet URL Generator
+</h1>
+Info hash list (Mandatory; Seperate each one by return):
 <script type="text/javascript">
 function update()
 {
@@ -37,15 +41,14 @@ function update()
 </script>
 <div>
 	<form name="form" onsubmit="update(); return false;">
-		<label>info hash list: <textarea id="hash" rows="25" cols="50">
-		</textarea></label>
-		(mandatory; Seperate each one by return)
+		<textarea id="hash" rows="20" cols="50"></textarea>
 		<br>
-		<label>torrent name (leave blank if using a hashlist): <input id="name" size=10></label>
+		Torrent name (Leave blank if using a hashlist):
+		<input id="name" size="20">
 		<br>
 		<input type="submit" value="Generate">
 		<br>
-		<div id="link">Magnet Links</div>: <textarea readonly id="link_text" rows="20" cols="30"></textarea>
+		<div id="link">Magnet Links:</div> <textarea readonly id="link_text" rows="20" cols="50"></textarea>
 		<br>
 	</form>
 </div>
