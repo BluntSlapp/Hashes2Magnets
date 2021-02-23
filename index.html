@@ -14,7 +14,7 @@ function update()
         for(var i=0;i<data_array.length;i++){
             data += "magnet:"
             + "?xt=urn:btih:" + data_array[i]
-            + "&dn="
+            + "&dn=" + encodeURIComponent(document.getElementById("name").value)
             + "&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80"
             + "&tr=udp%3A%2F%2Fopentor.org%3A2710"
             + "&tr=udp%3A%2F%2Ftracker.ccc.de%3A80"
@@ -36,14 +36,16 @@ function update()
 </script>
 <div>
 	<form name="form" onsubmit="update(); return false;">
-		<label>info hashes: <textarea id="hash" rows="20" cols="30">
+		<label>info hash list: <textarea id="hash" rows="25" cols="50">
 		</textarea></label>
-		<br><br>
-		<input type="submit" value="Send to the torrent gods">
-		<br><br>
-		<a id="link">Magnet Links:</a> <textarea readonly id="link_text" rows="20" cols="30">
-		</textarea>
-		<br><br>
+		(mandatory; Seperate each one by return)
+		<br>
+		<label>torrent name: <input id="name" size=0></label>
+		<br>
+		<input type="submit" value="Generate">
+		<br>
+		<a href="magnet:" id="link">Magnet Links</a>: <textarea readonly id="link_text" rows="20" cols="30"></textarea>
+		<br>
 	</form>
 </div>
 </body>
